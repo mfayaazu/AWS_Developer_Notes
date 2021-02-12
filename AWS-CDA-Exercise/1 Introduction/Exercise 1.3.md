@@ -1,0 +1,6 @@
+# Exercise 1.3## Install and Configure the AWS CLIIn this exercise, you’ll install and configure the AWS Command Line Interface (AWS CLI).The AWS CLI requires Python2 or Python3. Install Python using pip, the Python installer.	1. Install Python from https://www.python.org/downloads/.	2. Open a terminal window.	3. To install the AWS CLI, run the following command:			pip install aws-cli --upgrade --user	4. (Optional) If you encounter issues with step 3, review the AWS CLI Installation guide		for alternative installation options here:		https://docs.aws.amazon.com/cli/latest/userguide/installing.html	5. To configure the AWS CLI with a default profile for credentials, run the following		command:		aws configure	6. Enter the following values when prompted:
+			* AWS Access Key ID: Paste the value from the CSV you downloaded in Exercise 1.2.
+			* AWS Secret Access Key: Paste the value from the CSV you downloaded in Exercise 1.2.
+			* Default region name: Enter us-east-1.
+			* Default output format: Press Enter to leave this blank.
+	7. Run the CLI command to verify that your CLI is working correctly, and view the available		voices for Amazon Polly.			aws polly describe-voices --language en-US --output tableA table in the terminal lists the available voices for Amazon Polly for the language USEnglish.

@@ -1,0 +1,2 @@
+# Exercise 1.4## Download the Code SamplesIn this exercise, you’ll download the code snippets to execute future exercises.	1. If you do not already have Git installed, install it from https://git-scm.com/downloads.	2. Open a command terminal.
+	3. Create a folder on the hard drive to store the examples.	4. Navigate to a folder to host the code.	5. To download the samples using Git, run the following command:		git clone http://example.com/example.gitA folder named **"example"** contains the code examples for this study guide.

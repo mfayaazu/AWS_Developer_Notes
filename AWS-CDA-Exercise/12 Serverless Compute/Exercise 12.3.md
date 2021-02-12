@@ -1,0 +1,28 @@
+#Exercise 12.3
+##verify list buckets
+To verify the two buckets, use the Python 3 SDK and run the following:
+```
+    import boto3
+# Variables for the bucket name and the region we will be using.
+# Important Note: Be sure to use the same bucket names you used in the previous two exercises.
+bucketInputName = "shoe-company-2018-ingestion-csv-demo"
+bucketOutputName = "shoe-company-2018-final-json-demo"
+bucketRegion = "us-west-1"
+
+# Creates an s3 Resource; this is a higher level API type service for s3.
+s3 = boto3.resource('s3')
+
+# Get all of the buckets
+bucket_iterator = s3.buckets.all()
+
+# Loop through the buckets
+for bucket in bucket_iterator:
+    if bucket.name == bucketInputName:
+        print("Found the input bucket\t:\t", bucket.name)
+    if bucket.name == bucketOutputName:
+        print("Found the output bucket\t:\t", bucket.name)
+```
+Here, you are looping through the buckets, and if the two that you created are found, they are displayed. If everything is successful, then you should see output similar to the fol- lowing:
+
+*Found the output bucket : shoe-company-2018-final-json-demo*
+*Found the input bucket : shoe-company-2018-ingestion-csv-demo*

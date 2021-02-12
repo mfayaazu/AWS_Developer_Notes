@@ -1,0 +1,5 @@
+# Exercise 2.10## Perform Partial CleanupIn this exercise, you will clean up unused instances and keep this Amazon VPC for future use. This partial cleanup reduces costs while providing an environment to complete future exercises. After partial cleanup, you may generate charges related to the Elastic IP address that was allocated for devassoc-nat but is not in use while that instance is stopped. 
+
+Complete the following tasks as part of the cleanup:	
+	**webserver**: Terminate.	**private-instance**: Terminate.	**devassoc-nat**: Stop. You must start this instance again before completing any exercises that require Amazon EC2 to launch or interact with instances in the private subnet.	**devassoc-c9**: No action. The AWS Cloud9 service will automatically stop and start thisinstance.	1. Navigate to the Services ➢ EC2.	2. To view your Amazon EC2 instances, select Instances. Clear any filters if they are present.
+	3. Select webserver and private-instance.	4. Select Actions ➢ Instance-State and Terminate.	5. Clear public-webserver and private-webserver.	6. Select devassoc-nat.	7. Select Actions ➢ Instance-State and Stop.
